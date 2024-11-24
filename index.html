@@ -1,0 +1,108 @@
+<HTML>
+
+<HEAD>
+
+<TITLE>Index</TITLE>
+<script>
+function send()
+{
+
+        var r = document.getElementById("rowS").value;
+        localStorage.setItem("numRow",r);
+        var c = document.getElementById("colS").value;
+        localStorage.setItem("numCol",c);
+        window.location.href = "GameGrid.html";
+
+}
+
+
+</script>
+<link href="Stylesheet.css" rel="stylesheet" type="text/css" />
+</HEAD>
+
+<BODY BGCOLOR="FAFAFA">
+  Grid Size: <select id="rowS" display = "inline">
+    <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4" selected = "selected">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+</select> x <select id="colS" display = "inline">
+  <option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4" selected = "selected">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+</select>
+
+
+   <button onclick="send()">go!</button>
+   <div id= "message"></div>
+
+<H1>2048</H1>
+
+to play the game, press <a href = "GameGrid.html" target = "_blank">here!</a>
+<HR>
+
+2048 is a simple tile game that took the world by storm a few years ago due to it's simplistic and casual nature. The game consists of a 4x4 board that is randomly filled with tiles each time you move, and the player must combine tiles of the same type to keep the board from filling and ending the game. You do this by choosing a direction, and all of the tiles on the board move as far as possible in the direction you chose. Tiles with the same number will combine into larger tiles, and the ultimate goal is to build a 2048 tile.
+ For more information, see <a href = "https://en.wikipedia.org/wiki/2048_(video_game)" target = "_blank">Wikipedia</a>
+
+<img src="2048_win.png">
+<P>
+<a href ="https://github.com/gabrielecirulli/2048/blob/master/LICENSE.txt" target = "_blank">permission to use image</a>
+
+<P>
+<h2>Software Design</h2>
+Model:
+<br><br>
+Constants:<br>
+var TableSize: the size of the game grid<br>
+var Win_val = 2048;<br>
+ <br>
+ Tiles:<br>
+ each tile will have only a numeric value. They can be empty, or have an integer value.<br>
+ Empty tiles will be defined as 0, while all other tiles values will be the same as the number stored<br>
+ <br>
+ <h3>Game:</h3><br>
+ each game will have the following properties:<br>
+ Win, a bool that tracks whether the game has been won<br>
+ GameOver, a bool that tracks whether the game has been lost (note that win and Gameover can both be true if a game was won and then the player continued playing, then lost)<br>
+ turn, the number of turns that the player has made<br>
+ score, representing the score of the player<br>
+<br>
+Functions/Methods<br>
+Up()<br>
+Moves each of the tiles to the highest empty spot in line with them, and merges equal tiles. Also creates one random tile in an empty spot on the board. Increments turn and calculates new score<br>
+<br>
+Down ()<br>
+Moves each of the tiles to the Lowest empty spot in line with them, and merges equal tiles. Also creates one random tile in an empty spot on the board.  Increments turn and calculates new score<br>
+<br>
+Left()<br>
+Moves each of the tiles to the Leftmost empty spot in line with them, and merges equal tiles. Also creates one random tile in an empty spot on the board.  Increments turn and calculates new score<br>
+<br>
+Right()<br>
+Moves each of the tiles to the Rightmost empty spot in line with them, and merges equal tiles. Also creates one random tile in an empty spot on the board.  Increments turn and calculates new score<br>
+<br>
+isOver()<br>
+returns a bool with the value of GameOver<br>
+<br>
+isWin()<br>
+returns a bool with the value of Win<br>
+<br>
+getScore()<br>
+returns the score
+
+
+<HR>
+
+</BODY>
+
+</HTML>

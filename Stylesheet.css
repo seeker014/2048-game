@@ -1,0 +1,66 @@
+.blank1 {background: Gainsboro;}
+.blank2 {background: White;}
+.two {background: #ff0066;}
+.four {background: red;}
+.eight {background: #ff9933;}
+.sixteen {background: yellow;}
+.thirtytwo {background:green;}
+.sixtyfour {background: #33cccc;}
+.onetwentyeight {background: #0066ff;}
+.twofiftysix {background: #6600cc;}
+.fivetwelve {background: #000066; color: grey;}
+.onetwentyfour {background: #000000; color: white;}
+.twentyfourtyeight {background: #FFFFFF; color: gold; border-width: 5px; border-color: gold; width: 90px;}
+.fourtyninetysix {background: grey; color: gold; border-width: 5px; border-color: gold; width: 90px;}
+.score {display: inline-block; margin-left: 280px; border: 10px black; height: 20px; width: 80px; }
+
+
+button {
+	border-radius: 12px;
+	background-color: white;
+	display: inline-block;
+
+}
+button:hover
+{
+	background-color: #AAAAAA;
+	color: white;
+	transition-duration: .4s;
+
+}
+p { color:black; }
+
+table, tr, td {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+}
+table {
+  border: 10px #101055;
+    table-layout: fixed;
+	  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td{
+	height 25%;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #E5CFc4;
+	font-size: 40px;
+	font: baloo;
+
+}
+tr {
+	width 25%;
+
+}
+
+.boring {
+	background-color: white;
+	height: 10px;
+	border: 1px solid black;
+	color = black;
+	font-size: 14px;
+
+}
